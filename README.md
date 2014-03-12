@@ -2,4 +2,4 @@
 
 Atom does not like your code. Try harder!
 
-![Screenshot](/screenshot/atom-facepalm.png)
+![Screenshot](https://raw.github.com/varyform/atom-facepalm/master/screenshot/atom-facepalm.png)
