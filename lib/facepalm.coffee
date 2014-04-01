@@ -6,8 +6,8 @@
 
 {Subscriber} = require 'emissary'
 
-CONFIG_ACTIVATION = 'Atom Facepalm.activationEvents'
-CONFIG_DEACTIVATION = 'Atom Facepalm.deactivationEvents'
+CONFIG_ACTIVATION = 'atom-facepalm.activationEvents'
+CONFIG_DEACTIVATION = 'atom-facepalm.deactivationEvents'
 
 class Facepalm
   Subscriber.includeInto @
@@ -23,23 +23,23 @@ class Facepalm
 
   updateSubscriptions: ->
     @unsubscribe()
-    activations = atom.config.get 'Atom Facepalm.activationEvents'
+    activations = atom.config.get CONFIG_ACTIVATION
 
     if activations.trim().length is 0
       @engage()
     else
       @subscribe atom, activations, => @engage()
 
-    deactivations = atom.config.get 'Atom Facepalm.deactivationEvents'
+    deactivations = atom.config.get CONFIG_DEACTIVATION
     @subscribe atom, deactivations, => @disengage()
 
   engage: ->
-    @watcher = atom.workspace.eachEditorView (view) =>
+    @watcher = atom.workspaceView.eachEditorView (view) =>
       view.addClass 'facepalm'
 
   disengage: ->
     @watcher.off() if @watcher
-    for view in atom.workspace.getEditorViews()
+    for view in atom.workspaceView.getEditorViews()
       view.removeClass 'facepalm'
 
 module.exports =
