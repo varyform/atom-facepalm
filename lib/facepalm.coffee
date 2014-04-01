@@ -28,6 +28,7 @@ class Facepalm
     if activations.trim().length is 0
       @engage()
     else
+      @disengage()
       @subscribe atom, activations, => @engage()
 
     deactivations = atom.config.get CONFIG_DEACTIVATION
