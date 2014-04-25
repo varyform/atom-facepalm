@@ -35,7 +35,7 @@ class Facepalm
     @subscribe atom, deactivations, => @disengage()
 
   engage: ->
-    @watcher = atom.workspaceView.eachEditorView (view) =>
+    @watcher = atom.workspaceView.eachEditorView (view) ->
       view.addClass 'facepalm'
 
   disengage: ->
