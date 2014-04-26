@@ -2,7 +2,7 @@
 
 Atom does not like your code. Try harder!
 
-![Screenshot](https://raw.github.com/varyform/atom-facepalm/master/screenshot/atom-facepalm.png)
+![Screenshot](https://raw.github.com/varyform/atom-facepalm/master/screenshots/static.png)
 
 ## Configuration
 
@@ -16,3 +16,5 @@ package](https://atom.io/packages/test-status), and specify the following settin
 
  * **Activation Events:** `test-status:fail`
  * **Deactivation Events:** `test-status:success`
+
+![Screenshot](https://raw.github.com/varyform/atom-facepalm/master/screenshots/dynamic.gif)
