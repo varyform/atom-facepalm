@@ -18,3 +18,6 @@ package](https://atom.io/packages/test-status), and specify the following settin
  * **Deactivation Events:** `test-status:success`
 
 ![Screenshot](https://raw.github.com/varyform/atom-facepalm/master/screenshots/dynamic.gif)
+
+## Contributors
+* [smashwilson](https://github.com/smashwilson) / [Ash Wilson](http://azurefire.net/) – Contextual facepalming.
